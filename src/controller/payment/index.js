@@ -34,6 +34,7 @@ module.exports = async (req, res, next) => {
       qrcode: qrcode.data.qrcode,
     });
   } catch (error) {
+    console.log(error);
     next(error);
   }
 };
