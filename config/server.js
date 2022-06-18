@@ -13,7 +13,6 @@ app.use(express.static(path.resolve(__dirname, "../public")));
 app.use(router);
 
 app.use(function (err, _req, res, _next) {
-  console.error(err.stack);
   res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(err.message);
 });
 
