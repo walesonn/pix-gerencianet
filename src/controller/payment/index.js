@@ -19,7 +19,6 @@ const oauthToken = authorizationToken();
 
 module.exports = async (req, res, next) => {
   try {
-    throw new Error("eu ");
     const token = await oauthToken;
     const { data } = token;
 
